@@ -1,0 +1,145 @@
+extends ./inc/layout.pug
+
+block wHead
+	meta(name="description" content="Landerz, test")
+	meta(name="keywords" content="Landerz, test")
+	link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css")
+	title=pageTitle
+
+block wBody
+	header.main-header
+		.wrapper
+			nav.main-nav
+				ul
+					li
+						a(href="#") Home
+					li
+						a(href="#features") Features
+					li
+						a(href="#about") About us
+					li
+						a(href="#testimonials") Testimonials
+					li
+						a(href="#") Blog
+					li
+						a(href="#contact") Contact
+	main
+		section.intro.wrapper
+			.control
+				h1 
+					a(href="#") 
+						|Landerz
+						span .
+				nav.mobile-nav
+					i(title="menu" aria-hidden="true" data-icon!="&#xe908" id="mobile-menu")
+					ul
+						li
+							a(href="#") Home
+						li
+							a(href="#features") Features
+						li
+							a(href="#about") About us
+						li
+							a(href="#testimonials") Testimonials
+						li
+							a(href="#") Blog
+						li
+							a(href="#contact") Contact
+			.banner
+				div
+					h2 Grow your business faster
+					p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam perferendis, magni facere dolore delectus modi, quae nostrum rerum maxime quam veritatis illum ratione officiis! Corrupti eaque eligendi et odio. Dicta.
+					a.button(href="#") Get started
+		section.features#features
+			h3 Features
+			.wrapper
+				ul
+					li
+						i(title="loading" aria-hidden="true" data-icon!="&#xe901")
+						h5 Business Consulting
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aut nesciunt nobis beatae, ea error enim incidunt cupiditate.
+						a(href="#") Learn more
+					li
+						i(title="store" aria-hidden="true" data-icon!="&#xe902")
+						h5 Market analysis
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aut nesciunt nobis beatae, ea error enim incidunt cupiditate.
+						a(href="#") Learn more
+					li
+						i(title="basket" aria-hidden="true" data-icon!="&#xe903")
+						h5 User monitoring
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aut nesciunt nobis beatae, ea error enim incidunt cupiditate.
+						a(href="#") Learn more
+					li
+						i(title="restart" aria-hidden="true" data-icon!="&#xe904")
+						h5 Insurance consulting
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aut nesciunt nobis beatae, ea error enim incidunt cupiditate.
+						a(href="#") Learn more
+					li
+						i(title="happy" aria-hidden="true" data-icon!="&#xe905")
+						h5 Costumer satisfied
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aut nesciunt nobis beatae, ea error enim incidunt cupiditate.
+						a(href="#") Learn more
+					li
+						i(title="plug" aria-hidden="true" data-icon!="&#xe906")
+						h5 Plug &amp; play
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aut nesciunt nobis beatae, ea error enim incidunt cupiditate.
+						a(href="#") Learn more	
+		section.prototypes.wrapper
+			.side-content
+				h3 Create interactive prototypes
+				p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis iusto illo quam, dicta nostrum provident esse incidunt odit, numquam minus assumenda repudiandae aut saepe natus nam necessitatibus impedit vel autem.
+				ul
+					li 
+						i(title="checkmark" aria-hidden="true" data-icon!="&#xe907")
+						|Lorem ipsum, dolor sit amet.
+					li 
+						i(title="checkmark" aria-hidden="true" data-icon!="&#xe907")
+						|Lorem ipsum, dolor sit amet.
+				.card
+					.author
+						img(src="./img/amalia.jpg", alt="picture amalia g")
+						h6 Amalia G.
+						p Co-Founder, XYZ Inc.
+					p "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, dolorem corrupti esse tempora quam laborum minima dicta?"
+		section.about#about
+			h3 About us
+			.wrapper
+				img(src="../img/about.png" alt="About us")
+				.side-content.f-right
+					h4 Create interactive prototypes
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates necessitatibus in distinctio odio voluptas consequuntur aliquam quaerat vel aliquid qui dolorum incidunt et velit, ipsum sapiente expedita quam ipsam dignissimos facere.
+					a.button(href="#") Learn more
+		section.testimonials#testimonials.wrapper
+			h3 Testimonials
+			.glider-contain
+				.glider
+					//- div
+					//- 	img(src="./img/smith.jpg", alt="picture john smith")
+					//- 	p.review "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, atque debitis. Mollitia blanditiis dolor error fuga ipsa inventore esse corporis sunt itaque dolorum, possimus cupiditate expedita quam ipsam dignissimos."
+					//- 	p.author John Smith
+					//- div
+					//- 	img(src="./img/smith.jpg", alt="picture john smith")
+					//- 	p.review "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, atque debitis. Mollitia blanditiis dolor error fuga ipsa inventore esse corporis sunt itaque dolorum, possimus cupiditate expedita quam ipsam dignissimos."
+					//- 	p.author John Smith
+				.dots(role="tablist")
+		section.contact#contact
+			h3 Get in touch
+			.wrapper
+				form(action="")
+					h4 Contact form
+					fieldset
+						label First name
+							input(type="text" pattern="[a-zA-Z]+" required)
+						label Last name
+							input(type="text" pattern="[a-zA-Z]+" required)
+					label(for="email") Email
+					input(type="email" id="email" required)
+					label(for="subject") Subject
+					input(type="text" id="subject" required)
+					label(for="message") Message
+					textarea(placeholder="Write your notes or questions here..." id="message" required)
+					input.button(type="submit" value="Send message")
+	footer.main-footer
+		p Copyright &copy;2019 All rights reserved
+	script(src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js")
+	script(src="../js/main.js")
