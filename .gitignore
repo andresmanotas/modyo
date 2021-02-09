@@ -61,6 +61,5 @@ typings/
 .next
 
 # Custom
-npm-shrinkwrap.json
 package.json
 gulpfile.js
